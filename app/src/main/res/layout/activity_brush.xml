@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_toRightOf="@+id/sizeSeekBar">
+
+    <TextView
+        android:text="Line Width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/size"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sizeSeekBar"
+        android:layout_weight="0.06"
+        android:layout_marginRight="70dp"
+        android:layout_below="@+id/size"
+        android:layout_alignParentStart="true"
+        android:progress="49"
+        android:max="99" />
+
+    <TextView
+        android:text="50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/size"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/sizeNum"
+        android:textSize="18sp"
+        android:layout_alignRight="@+id/sizeSeekBar"
+        android:layout_marginRight="25dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rSeekBar"
+        android:layout_weight="0.06"
+        android:progress="0"
+        android:layout_below="@+id/color"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:max="255" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gSeekBar"
+        android:layout_weight="0.06"
+        android:progress="0"
+        android:layout_below="@+id/rSeekBar"
+        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/gText"
+        android:max="255" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSeekBar"
+        android:layout_weight="0.06"
+        android:progress="0"
+        android:layout_below="@+id/gSeekBar"
+        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/gSeekBar" />
+
+    <TextView
+        android:text="R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color"
+        android:layout_alignEnd="@+id/color"
+        android:layout_marginEnd="11dp"
+        android:id="@+id/rText"
+        android:layout_alignStart="@+id/rSeekBar"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gSeekBar"
+        android:layout_alignEnd="@+id/color"
+        android:id="@+id/gText"
+        android:layout_alignStart="@+id/rText"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bSeekBar"
+        android:layout_alignEnd="@+id/gText"
+        android:id="@+id/bText"
+        android:layout_alignStart="@+id/bSeekBar"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bSeekBar"
+        android:layout_marginTop="19dp"
+        android:id="@+id/aSeekBar"
+        android:layout_alignStart="@+id/bSeekBar"
+        android:layout_alignParentEnd="true"
+        android:progress="255"
+        android:max="255" />
+
+    <TextView
+        android:text="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aSeekBar"
+        android:layout_alignEnd="@+id/bText"
+        android:id="@+id/aText"
+        android:layout_alignStart="@+id/aSeekBar"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:padding="5dp"
+        android:id="@+id/imageView"
+        android:background="@android:color/white"
+        android:layout_below="@+id/aSeekBar"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:id="@+id/preview"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:background="@android:color/black"
+        android:layout_margin="5dp" />
+
+    <Button
+        android:text="cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/cancelButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="save changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:layout_above="@+id/cancelButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:id="@+id/color"
+        android:textSize="24sp"
+        android:layout_below="@+id/sizeNum"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Adjust width with speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeNum"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/checkBox" />
+
+</RelativeLayout>
